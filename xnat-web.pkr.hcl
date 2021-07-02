@@ -22,6 +22,10 @@ variable "xnat_plugins_list" {
   ]
   type = list(string)
 }
+variable "custom_catalina_opts" {
+  default = "-Dxnat.home=$${XNAT_HOME} -Xms512m -Xmx4g -XX:+UseConcMarkSweepGC -XX:-OmitStackTraceInFastThrow"
+  type = string
+}
 
 variable "docker_image" {
   default = "tomcat:9.0.46-jdk8-openjdk-buster"
@@ -80,6 +84,7 @@ build {
 
   provisioner "shell" {
     inline = [
+	  "echo 'export CUSTOM_CATALINA_OPTS=\"${var.custom_catalina_opts}\"' >> /etc/profile",
       "apt-get update",
       "apt-get -y install postgresql-client",
       "rm -rf $${CATALINA_HOME}/webapps/*",

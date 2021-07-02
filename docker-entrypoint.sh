@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -x
+source /etc/profile
 CATALINA_SH="${CATALINA_HOME}/bin/catalina.sh"
 
 if [ "$(basename $1)" == 'catalina.sh' ]; then
