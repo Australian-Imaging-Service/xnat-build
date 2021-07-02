@@ -84,7 +84,7 @@ build {
 
   provisioner "shell" {
     inline = [
-	  "echo 'export CUSTOM_CATALINA_OPTS=\"${var.custom_catalina_opts}\"' >> /etc/profile",
+      "echo 'export CUSTOM_CATALINA_OPTS=\"${var.custom_catalina_opts}\"' >> /etc/profile",
       "apt-get update",
       "apt-get -y install postgresql-client",
       "rm -rf $${CATALINA_HOME}/webapps/*",
