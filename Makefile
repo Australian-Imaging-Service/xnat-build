@@ -7,7 +7,6 @@ plugin_xsync_ver = 1.4.0.1
 plugin_batch_launch_ver = 0.5.0
 
 xnat_war = xnat-web-$(xnat_version).war
-# xnat_url = https://github.com/Australian-Imaging-Service/xnat-web/releases/download/release-$(xnat_version)-ais/$(xnat_war)
 xnat_url = https://bitbucket.org/xnatdev/xnat-web/downloads/$(xnat_war)
 
 plugin_container_service_jar = container-service-$(plugin_container_service_ver).jar
@@ -20,7 +19,6 @@ plugin_ohif_viewer_jar = ohif-viewer-$(plugin_ohif_viewer_ver).jar
 plugin_ohif_viewer_url = https://bitbucket.org/icrimaginginformatics/ohif-viewer-xnat-plugin/downloads/ohif-viewer-$(plugin_ohif_viewer_ver)-XNAT-1.8.0.jar
 
 plugin_openid_auth_jar = openid-auth-plugin-$(plugin_openid_auth_ver).jar
-# plugin_openid_auth_url = https://github.com/Australian-Imaging-Service/xnat-openid-auth-plugin/releases/download/$(plugin_openid_auth_ver)/xnat-openid-auth-plugin-all-$(plugin_openid_auth_ver).jar
 plugin_openid_auth_url = https://github.com/Australian-Imaging-Service/openid-auth-plugin/releases/download/$(plugin_openid_auth_ver)/openid-auth-plugin-$(plugin_openid_auth_ver).jar
 
 plugin_xsync_jar = xsync-plugin-all-$(plugin_xsync_ver).jar
